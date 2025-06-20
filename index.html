@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EletroPro: Seu Guia Completo para Eletricistas</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">EletroPro</div>
+            <ul>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#tutoriais">Tutoriais</a></li>
+                <li><a href="#calculos">Cálculos</a></li>
+                <li><a href="#simulador">Simulador</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio" class="hero">
+            <div class="hero-content">
+                <h1>Bem-vindo ao EletroPro</h1>
+                <p>Seu recurso completo para instalações elétricas seguras e eficientes, com base nas normas brasileiras.</p>
+                <a href="#tutoriais" class="btn">Comece Agora!</a>
+            </div>
+        </section>
+
+        <section id="tutoriais" class="section-content">
+            <h2>Tutoriais Detalhados</h2>
+            <p>Aprenda a dimensionar, orçar e executar projetos elétricos com confiança.</p>
+            <div class="tutorial-grid">
+                <div class="tutorial-item">
+                    <h3>Como Calcular um Orçamento</h3>
+                    <p>Guia passo a passo para precificar seus serviços e materiais.</p>
+                    <a href="tutoriais/orcamento.html" class="btn-small">Ver Tutorial</a>
+                </div>
+                <div class="tutorial-item">
+                    <h3>Levantamento de Carga Residencial (NBR 5410)</h3>
+                    <p>Entenda os requisitos da norma para dimensionamento de cargas.</p>
+                    <a href="tutoriais/levantamento-carga.html" class="btn-small">Ver Tutorial</a>
+                </div>
+                </div>
+        </section>
+
+        <section id="calculos" class="section-content">
+            <h2>Ferramentas de Cálculos Elétricos</h2>
+            <p>Todas as fórmulas e tabelas das normas pertinentes ao seu alcance.</p>
+            <div class="calculo-item">
+                <h3>Cálculo de Corrente Elétrica</h3>
+                <label for="potencia">Potência (W ou VA):</label>
+                <input type="number" id="potencia" placeholder="Ex: 1000">
+                <label for="tensao">Tensão (V):</label>
+                <input type="number" id="tensao" placeholder="Ex: 220">
+                <label for="fase">Fase:</label>
+                <select id="fase">
+                    <option value="monofasico">Monofásico</option>
+                    <option value="bifasico">Bifásico</option>
+                    <option value="trifasico">Trifásico</option>
+                </select>
+                <label for="fp_input">Fator de Potência (apenas para CA - 0.8 a 1.0):</label>
+                <input type="number" id="fp_input" value="1.0" step="0.01" min="0.8" max="1.0">
+                <button onclick="calcularCorrente()">Calcular Corrente</button>
+                <p>Corrente Calculada: <span id="resultadoCorrente"></span> A</p>
+            </div>
+            </section>
+
+        <section id="simulador" class="section-content">
+            <h2>Simulador de Circuito Elétrico</h2>
+            <p>Monte seu circuito, escolha componentes e veja o dimensionamento conforme a NBR 5410.</p>
+            <p>(Em construção: Esta seção será o seu simulador interativo!)</p>
+            </section>
+
+        <section id="contato" class="section-content">
+            <h2>Entre em Contato</h2>
+            <p>Tem dúvidas ou sugestões? Fale conosco!</p>
+            <form>
+                <input type="text" placeholder="Seu Nome">
+                <input type="email" placeholder="Seu Email">
+                <textarea placeholder="Sua Mensagem"></textarea>
+                <button type="submit" class="btn">Enviar Mensagem</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 EletroPro. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
